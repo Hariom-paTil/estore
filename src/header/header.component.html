@@ -1,0 +1,23 @@
+<div class="header">
+    <!-- Webpage Name -->
+    <div class="logo">E-Store</div>
+
+    <!-- Search Bar and Dropdown -->
+    <div class="search-bar">
+      <select>
+        <option value="men">Men</option>
+        <option value="women">Women</option>
+        <option value="children">Children</option>
+      </select>
+      <input type="text" placeholder="Search products...">
+      <button type="button"><fa-icon [icon]="faSearch"></fa-icon></button>
+    </div>
+
+    <!-- Sign In, Wish List, and Cart Icons -->
+    <div class="icon-links">
+      <a href="/login"><fa-icon [icon]="faUserCircle"></fa-icon></a>
+      <a href="/wishlist"><fa-icon [icon]="faHeart"></fa-icon></a>
+      <a href="/cart"><fa-icon [icon]="faShoppingCart"></fa-icon></a>
+    </div>
+  </div>
+
