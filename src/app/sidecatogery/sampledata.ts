@@ -1,4 +1,5 @@
-import { CATEGERY } from "../cate/categery";
+import { CATEGERY } from "./categery";
+
 
 export const categories_ARRAY: CATEGERY[]=[
     {

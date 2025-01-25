@@ -4,10 +4,11 @@ import { CatnavigationbarComponent } from "../catnavigationbar/catnavigationbar.
 import { PagenotfoundComponent } from '../pagenotfound/pagenotfound.component';
 import { SidecatogeryComponent } from "../sidecatogery/sidecatogery.component";
 
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, CatnavigationbarComponent, PagenotfoundComponent, SidecatogeryComponent],
+  imports: [HeaderComponent, CatnavigationbarComponent, PagenotfoundComponent, SidecatogeryComponent,],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
