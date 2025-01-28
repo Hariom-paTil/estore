@@ -1,0 +1,7 @@
+<div class="product-container">
+    <div class="product-card" *ngFor="let pro of product">
+        <img [src]="''+pro.product_img+'.jpg'"  class="product-img">
+        <h3 class="product-name">{{ pro.product_name }}</h3>
+        <p class="product-price">{{ pro.product_price }}</p>
+    </div>
+</div>
