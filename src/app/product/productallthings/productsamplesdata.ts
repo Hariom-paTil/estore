@@ -3,7 +3,7 @@ import { PRODUCTINTEFACE } from "./productinteface";
 export const sampleproduct: PRODUCTINTEFACE[]=[{
     id: 1,
     product_name: "SHOES",
-    product_img: "img-1",
+    product_img: "jacket.jpg",
     product_price: 500,
 },
 {

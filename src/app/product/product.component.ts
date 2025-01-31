@@ -12,7 +12,8 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductComponent {
 product: PRODUCTINTEFACE[]=[];
-constructor(productvariable: ProductserviceService ){
-  this.product=productvariable.getproductlist();
+
+constructor(private productvariable: ProductserviceService ){
+  this.product= this.productvariable.getproductlist();
 }
 }

@@ -7,7 +7,6 @@ import { sampleproduct } from './productsamplesdata';
 }
 )
 export class ProductserviceService {
- // getproductlist(input: any): PRODUCTINTEFACE[] 
   constructor() { }
    getproductlist(): PRODUCTINTEFACE[] {
     return sampleproduct; //the actual product stor with name,img,value,id
