@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CategoreyService } from './categoreyservices.service';
+import { CategoreyService } from './sidecatogery/categoreyservices.service';
 
 describe('CategoreyservicesService', () => {
   let service: CategoreyService;

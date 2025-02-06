@@ -4,12 +4,13 @@ import { CatnavigationbarComponent } from "../catnavigationbar/catnavigationbar.
 import { PagenotfoundComponent } from '../pagenotfound/pagenotfound.component';
 import { SidecatogeryComponent } from "../sidecatogery/sidecatogery.component";
 import { ProductComponent } from "../product/product.component";
+import { HttpClientModule } from '@angular/common/http';
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, CatnavigationbarComponent, PagenotfoundComponent, SidecatogeryComponent, ProductComponent],
+  imports: [HeaderComponent, CatnavigationbarComponent, PagenotfoundComponent, SidecatogeryComponent, ProductComponent,HttpClientModule,],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
