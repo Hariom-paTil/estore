@@ -5,9 +5,9 @@
     <!-- Search Bar and Dropdown -->
     <div class="search-bar">
       <select>
-        <option value="men">Men</option>
-        <option value="women">Women</option>
-        <option value="children">Children</option>
+        <option *ngFor='let cat of storeitem.topLevelCategories$ | async'>
+          {{cat.categery_name}}
+        </option>
       </select>
       <input type="text" placeholder="Search products...">
       <button type="button"><fa-icon [icon]="faSearch"></fa-icon></button>
