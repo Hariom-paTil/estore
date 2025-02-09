@@ -1,8 +1,7 @@
 <div class="product-container">
-    <div class="product-card" *ngFor="let pro of product">
-      <img [src]="'assets/images/' + pro.product_img" class="product-img" alt=" {{ pro.product_name }}">
-      <h3 class="product-name">{{ pro.product_name }}</h3>
-      <p class="product-price">₹{{ pro.product_price }}</p>
-    </div>
+  <div class="product-card" *ngFor="let pro of product">
+    <img [src]="'assets/images/' + pro.product_img" class="product-img" alt=" +{{ pro.product_name }}">
+    <h3 class="product-name">{{ pro.product_name }}</h3>
+    <p class="product-price">₹{{ pro.product_price }}</p>
   </div>
-  
+</div>

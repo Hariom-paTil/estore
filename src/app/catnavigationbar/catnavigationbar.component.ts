@@ -1,8 +1,6 @@
-import { Component } from '@angular/core';
-import { Category } from '../types/Category.type';
-import { CategoreyService } from '../sidecatogery/categoreyservices.service';
-import { CATEGERY } from '../sidecatogery/categery';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { CategoriesStoreItem } from '../services/categories.storeitem';
 @Component({
   selector: 'app-catnavigationbar',
   standalone: true,
@@ -12,12 +10,9 @@ import { CommonModule } from '@angular/common';
 })
 export class CatnavigationbarComponent {
      
-  categories: CATEGERY[] = [];
-constructor (private categoryService: CategoreyService) {
-categoryService.getall_category_values().subscribe((categories) => {
-this.categories = categories.filter(
-(category) => category.parent_categery_id === null
-);
-});
+ 
+constructor (public categorystore: CategoriesStoreItem ) {
+
+
 }
 }

@@ -1,7 +1,7 @@
 <div class="category-bar">
     <ul>
       <li><a href="javascript:void(0)">Home</a></li>
-      <li *ngFor="let category of categories">
+      <li *ngFor="let category of categorystore.topLevelCategories$ | async">
       <a href="javascript:void 0 "> {{ category.categery_name }} </a>
       </li>
     </ul>
