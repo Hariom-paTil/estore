@@ -1,5 +1,5 @@
 <div class="product-container">
-  <div class="product-card" *ngFor="let pro of product">
+  <div class="product-card" *ngFor="let pro of productstore.products$ | async">
     <img [src]="'assets/images/' + pro.product_img" class="product-img" alt=" +{{ pro.product_name }}">
     <h3 class="product-name">{{ pro.product_name }}</h3>
     <p class="product-price">₹{{ pro.product_price }}</p>

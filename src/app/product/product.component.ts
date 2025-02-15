@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { PRODUCTINTEFACE } from './productallthings/productinteface';
 import { ProductserviceService } from './productallthings/productservice.service';
 import { CommonModule } from '@angular/common';
+import { ProductsStoreItem } from './add_product_store/product_store_item';
 
 @Component({
   selector: 'app-product',
@@ -11,9 +12,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './product.component.scss',
 })
 export class ProductComponent {
-product: PRODUCTINTEFACE[]=[];
 
-constructor(productvariable: ProductserviceService ){
-  productvariable.getallproduct().subscribe(product => this.product = product);
+
+constructor(public productstore: ProductsStoreItem ){
+  
 }
+ 
 }

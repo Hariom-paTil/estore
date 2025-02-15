@@ -5,7 +5,7 @@ import { CatnavigationbarComponent } from "../catnavigationbar/catnavigationbar.
 import { ProductComponent } from "../product/product.component";
 import { CategoriesStoreItem } from '../services/categories.storeitem';
 import { SidecatogeryComponent } from "../sidecatogery/sidecatogery.component";
-
+import { ProductsStoreItem } from '../product/add_product_store/product_store_item';
 
 @Component({
   selector: 'app-home',
@@ -13,11 +13,12 @@ import { SidecatogeryComponent } from "../sidecatogery/sidecatogery.component";
   imports: [HeaderComponent, CatnavigationbarComponent, SidecatogeryComponent, ProductComponent,HttpClientModule,],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  providers:[CategoriesStoreItem]
+  providers:[CategoriesStoreItem,ProductsStoreItem]
 })
 export class HomeComponent {
-constructor (private categorystore : CategoriesStoreItem){
+constructor (private categorystore : CategoriesStoreItem,private productstoreitem: ProductsStoreItem){
   this.categorystore.loadCategories();
+  this.productstoreitem.loadProducts();
 }
 
 
