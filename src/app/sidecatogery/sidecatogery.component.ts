@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component,EventEmitter,Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { CategoriesStoreItem } from '../services/categories.storeitem';
@@ -13,6 +13,8 @@ import { CATEGERY } from './categery';
   styleUrl: './sidecatogery.component.scss'
 })
 export class SidecatogeryComponent {
+  @Output()
+subCategoryClicked: EventEmitter<number> = new EventEmitter<number>();
   categories: CATEGERY[] = [];
   subscrption: Subscription= new Subscription();
   constructor(categorystore: CategoriesStoreItem) {
@@ -22,12 +24,18 @@ export class SidecatogeryComponent {
   );
   }
 
+
+
   getCategories(parentCategoryId?: number): CATEGERY[] {
     return this.categories.filter((category) =>
       parentCategoryId
         ? category.parent_categery_id === parentCategoryId
         : category.parent_categery_id === null
     );
+  }
+
+  onSubCategoryClick (subCategory: CATEGERY): void {
+    this.subCategoryClicked.emit(subCategory.id);
   }
 //  categories: CATEGERY[]=[]; //is a interface that hold filed like id and name
 //  constructor(private catogeryservice: CategoreyService ){ //"CategoreyService" :-is a class that come from a service file

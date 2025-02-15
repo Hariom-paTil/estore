@@ -24,7 +24,7 @@
         >
           <div class="accordion-body">
             <ul>
-              <li *ngFor='let subcategory of getCategories(maincategory.id)' class="sub-items"><a href="#">{{subcategory.categery_name}}</a></li>
+              <li *ngFor='let subcategory of getCategories(maincategory.id)' class="sub-items"><a (click)="onSubCategoryClick(subcategory)">{{subcategory.categery_name}}</a></li>
             </ul>
           </div>
         </div>

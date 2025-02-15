@@ -3,15 +3,17 @@ import { PRODUCTINTEFACE } from './productinteface';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-@Injectable({
- providedIn: 'root'
-}
-)
+@Injectable()
 export class ProductserviceService {
   constructor(private httpclinet: HttpClient) { }
-  
-  getallproduct(): Observable<PRODUCTINTEFACE[]>{
-    return this.httpclinet.get<PRODUCTINTEFACE[]>('http://localhost:5001/products')
+
+  getallproduct(query?: string): Observable <PRODUCTINTEFACE[]> {
+    let url: string = 'http://localhost:5001/products';
+    if (query) {
+      url += '?' + query;
+    }
+      return this.httpclinet.get<PRODUCTINTEFACE[]>(url);
+    
   }
- 
+
 }

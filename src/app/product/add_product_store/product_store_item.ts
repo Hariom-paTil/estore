@@ -11,8 +11,8 @@ export class ProductsStoreItem extends StoreItem<PRODUCTINTEFACE[]> {
         super([]);
     }
 
-    async loadProducts() {
-        this.productsService.getallproduct().subscribe((products) => {
+    async loadProducts(query?:string) {
+        this.productsService.getallproduct(query).subscribe((products) => {
             this.setValue(products);
         });
     }

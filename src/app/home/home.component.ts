@@ -20,6 +20,8 @@ constructor (private categorystore : CategoriesStoreItem,private productstoreite
   this.categorystore.loadCategories();
   this.productstoreitem.loadProducts();
 }
-
-
+onSelectSubCategory (subCategoryId: number): void {
+  this.productstoreitem.loadProducts('subcategoryid=' + subCategoryId);
 }
+}
+
