@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
 import { PRODUCTINTEFACE } from './productinteface';
-import { sampleproduct } from './productsamplesdata';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
  providedIn: 'root'
 }
 )
 export class ProductserviceService {
-  constructor() { }
-   getproductlist(): PRODUCTINTEFACE[] {
-    return sampleproduct; //the actual product stor with name,img,value,id
+  constructor(private httpclinet: HttpClient) { }
+  
+  getallproduct(): Observable<PRODUCTINTEFACE[]>{
+    return this.httpclinet.get<PRODUCTINTEFACE[]>('http://localhost:5001/products')
   }
+ 
 }
